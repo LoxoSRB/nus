@@ -23,9 +23,9 @@ $por_nsmpovnsrv = 'Nisam povezan na server sa bazom usled : ';
 $por_nmgdkordb = 'Ne mogu da koristim bazu usled: ';
 
 // Povezivanje na server i bazu sa proverom grešaka
-$link = mysql_connect($db_server, $db_korisnik, $db_lozinka);		if (!$link)				{ die ($err_otv_tag . $por_nsmpovnsrv . mysql_error() . $err_ztv_tag); }
-$odabirBaze = mysql_select_db($db_naziv, $link);					if (!$odabirBaze)		{ die ($err_otv_tag . $por_nmgdkordb . mysql_error() . $err_ztv_tag); }
+$link = mysql_connect($db_server, $db_korisnik, $db_lozinka);		if (!$link){ die ($err_otv_tag . $por_nsmpovnsrv . mysql_error() . $err_ztv_tag); }
+$odabirBaze = mysql_select_db($db_naziv, $link);					if (!$odabirBaze){ die ($err_otv_tag . $por_nmgdkordb . mysql_error() . $err_ztv_tag); }
+
 mysql_query("SET NAMES 'utf8'", $link);
 
 ?>
-<link rel="stylesheet" href="css/naopakestv.css" />
