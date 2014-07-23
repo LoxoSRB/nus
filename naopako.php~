@@ -1,0 +1,302 @@
+<?php
+?>
+<html>
+	<head>
+		<title>Наопаке ствари</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="Заједно откривамо које су то све наопаке ствари у нашој земљи" />
+		<meta name="keywords" content="наопако, србија, ујс" />
+
+		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+		<script src="js/skel.min.js"></script>
+		<script src="js/init.js"></script>
+
+        <script src="js/jquery.min.js"></script>
+        <script src="vex-2.0.1/js/vex.combined.min.js"></script>
+        <script>vex.defaultOptions.className = 'vex-theme-os';</script>
+        <link rel="stylesheet" href="vex-2.0.1/css/vex.css" />
+        <link rel="stylesheet" href="vex-2.0.1/css/vex-theme-os.css" />
+
+		<noscript>
+			<link rel="stylesheet" href="css/skel.css" />
+			<link rel="stylesheet" href="css/style.css" />
+			<link rel="stylesheet" href="css/style-wide.css" />
+			<link rel="stylesheet" href="css/style-noscript.css" />
+		</noscript>
+
+	</head>
+
+<style>
+.tabela {
+	margin:0px;padding:0px;
+	width:100%;
+	box-shadow: 10px 10px 5px #888888;
+	border:1px solid #cccccc;	
+}
+
+.tabela table{
+    border-collapse: collapse;
+    border-spacing: 0;
+	width:100%;
+	height:100%;
+	margin:0px;padding:0px;
+}
+
+.tabela tr:last-child td:last-child { }
+
+.tabela table tr:first-child td:first-child { }
+
+.tabela table tr:first-child td:last-child { }
+
+.tabela tr:last-child td:first-child { }
+
+.tabela tr:hover td { }
+
+.tabela tr:nth-child(odd){ background-color:#e5e5e5; }
+
+.tabela tr:nth-child(even){ background-color:#ffffff; }
+
+.tabela td{
+	vertical-align:middle;
+	border:1px solid #cccccc;
+	border-width:0px 1px 1px 0px;
+	text-align:left;
+	padding:11px;
+	font-size:13px;
+	font-family:Helvetica;
+	font-weight:normal;
+	color:#000000;
+}
+
+.tabela tr:last-child td{
+	border-width:0px 1px 0px 0px;
+}
+
+.tabela tr td:last-child{
+	border-width:0px 0px 1px 0px;
+}
+
+.tabela tr:last-child td:last-child{
+	border-width:0px 0px 0px 0px;
+}
+
+.tabela tr:first-child td{
+	background:-o-linear-gradient(bottom, #bf005f 5%, #bf005f 100%);
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #bf005f), color-stop(1, #bf005f) );
+	background:-moz-linear-gradient( center top, #bf005f 5%, #bf005f 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#bf005f", endColorstr="#bf005f");
+    background: -o-linear-gradient(top,#bf005f,bf005f);
+	background-color:#bf005f;
+	border:0px solid #cccccc;
+	text-align:center;
+	border-width:0px 0px 1px 1px;
+	font-size:16px;
+	font-family:Arial;
+	font-weight:bold;
+	color:#ffffff;
+}
+
+.tabela tr:first-child:hover td{
+	background:-o-linear-gradient(bottom, #bf005f 5%, #bf005f 100%);
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #bf005f), color-stop(1, #bf005f) );
+	background:-moz-linear-gradient( center top, #bf005f 5%, #bf005f 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#bf005f", endColorstr="#bf005f");
+	background: -o-linear-gradient(top,#bf005f,bf005f);
+	background-color:#bf005f;
+}
+
+.tabela tr:first-child td:first-child{
+	border-width:0px 0px 1px 0px;
+}
+
+.tabela tr:first-child td:last-child{
+	border-width:0px 0px 1px 1px;
+}
+
+.opcije{
+    z-index: 1;
+    position: fixed;
+    right: 0px;
+    top: 25%;
+    width: 40px; height: 40px;
+    background-color: darkslategrey;
+}
+
+.meni{
+    display:none;
+    position: fixed;
+    right: 0px;
+    top: 25%;
+    margin-top: 40px;
+    width: 40px; height: 225px;
+    background-color: deepskyblue;
+}
+
+.meni-podloga{
+    display:block;
+    position: fixed;
+    right: 0px;
+    top: 25%;
+    margin-top: 40px;
+    width: 40px; height: 8px;
+    background-color: deepskyblue;
+}
+
+a {
+    border-bottom: none 0px !important;
+}
+
+</style>
+
+<body style="overflow: auto;">
+<center>
+<div id="meni" class="opcije"><p style="margin-top: -2;font-weight: bold;font-size: 54px;"><a href="#" class="fa fa-zupcanik" title="Опције">Опције</a></p></div>
+<div class="meni-podloga"></div>
+<div id="opcije" class="meni fa fa-menu">
+        <nav>
+            <ul>
+            	<br>
+            	<li><a href="/nus" class="fa fa-indeks" style="text-decoration: none;" title="Почетна"></a></li>
+            	<br>
+                <li><a href="#" class="fa fa-dodavanje dodavanje" style="text-decoration: none;" title="Додај"></a></li>
+            	<br>
+                <li><a href="https://github.com/novicaz/naopako" target="_blank" class="fa fa-github" title="Прикључи се развоју ове апликације"></a></li>
+            	<br>
+				<li><a href="https://www.facebook.com/groups/1428615774079658/" target="_blank" class="fa fa-facebook" title="Пронађи нас на фејсу"></a></li>
+            	<br>
+				<li><a href="#" class="fa fa-pomoc" title="Помоћ"></a></li>
+            	<br>
+            </ul>
+        </nav>
+</div>
+<div class="tabela">
+                <table>
+                    <tr style="height: 60px;">
+                        <td style="width:120px;">Редни број</td>
+                        <td style="width:160px;">Датум уноса</td>
+                        <td>Опис</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>1</p>
+                        </td>
+                        <td>
+                            <p>12.18.2014.</p>
+                        </td>
+                        <td>
+                            <p>Описни текст тест 1</p>
+                            <p style="color:grey; font-size: smaller;">1600 особа мисли да је ово тачно<br>600 особа мисли да је ово нетачно</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>1</p>
+                        </td>
+                        <td>
+                            <p>12.18.2014.</p>
+                        </td>
+                        <td>
+                            <p>Описни текст тест 1</p>
+                            <p style="color:grey; font-size: smaller;">1600 особа мисли да је ово тачно<br>600 особа мисли да је ово нетачно</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>1</p>
+                        </td>
+                        <td>
+                            <p>12.18.2014.</p>
+                        </td>
+                        <td>
+                            <p>Описни текст тест 1</p>
+                            <p style="color:grey; font-size: smaller;">1600 особа мисли да је ово тачно<br>600 особа мисли да је ово нетачно</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>1</p>
+                        </td>
+                        <td>
+                            <p>12.18.2014.</p>
+                        </td>
+                        <td>
+                            <p>Описни текст тест 1</p>
+                            <p style="color:grey; font-size: smaller;">1600 особа мисли да је ово тачно<br>600 особа мисли да је ово нетачно</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>1</p>
+                        </td>
+                        <td>
+                            <p>12.18.2014.</p>
+                        </td>
+                        <td>
+                            <p>Описни текст тест 1</p>
+                            <p style="color:grey; font-size: smaller;">1600 особа мисли да је ово тачно<br>600 особа мисли да је ово нетачно</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>1</p>
+                        </td>
+                        <td>
+                            <p>12.18.2014.</p>
+                        </td>
+                        <td>
+                            <p>Описни текст тест 1</p>
+                            <p style="color:grey; font-size: smaller;">1600 особа мисли да је ово тачно<br>600 особа мисли да је ово нетачно</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>1</p>
+                        </td>
+                        <td>
+                            <p>12.18.2014.</p>
+                        </td>
+                        <td>
+                            <p>Описни текст тест 1</p>
+                            <p style="color:grey; font-size: smaller;">1600 особа мисли да је ово тачно<br>600 особа мисли да је ово нетачно</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>1</p>
+                        </td>
+                        <td>
+                            <p>12.18.2014.</p>
+                        </td>
+                        <td>
+                            <p>Описни текст тест 1</p>
+                            <p style="color:grey; font-size: smaller;">1600 особа мисли да је ово тачно<br>600 особа мисли да је ово нетачно</p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+</center>
+
+<script>	$(document).ready(function() {	$('#meni').click(function() {	$('#opcije').slideToggle("fast");	});	});	</script>
+       <!-- Формулар за додавање -->
+         <script>
+                  $('.dodavanje').click(function(){
+                      vex.dialog.open({
+                          message: '<p>Изнесите своје запажање</p>',
+                          input: '<textarea name="opis" style="color: black;" placeholder="Опишите укратко" cols="25" rows="6" required></textarea>' + '<br>',
+                          buttons: [  $.extend({}, vex.dialog.buttons.YES, { text: 'Даље' })  ],
+                          callback: function (data){
+                              if(data.opis!=undefined){ 
+                                  vex.dialog.confirm({
+                                      message: '<h2>Хвала на времену које сте издвојили</h2><br><span>Ваше запажање је успешно забележено.' + '</span>' + '<br>',
+                                      buttons: [  $.extend({}, vex.dialog.buttons.YES, { text: 'Даље' })  ],
+                                      callback: function(value) {
+                                      	$.post('dbupis.php', {unos: data.opis});
+                                      }
+                                  });
+                              }
+                           }
+                      });
+                  });
+        </script>
+</body>
+</html>

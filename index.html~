@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+<!-- Hаопаке Ствари вер 1.0 бај УЈС -->
+<html>
+	<head>
+		<title>Наопаке ствари</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="Заједно откривамо које су то све наопаке ствари у нашој земљи" />
+		<meta name="keywords" content="наопако, србија, ујс" />
+
+		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+		<script src="js/skel.min.js"></script>
+		<script src="js/init.js"></script>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="vex-2.0.1/js/vex.combined.min.js"></script>
+        <script>vex.defaultOptions.className = 'vex-theme-os';</script>
+        <link rel="stylesheet" href="vex-2.0.1/css/vex.css" />
+        <link rel="stylesheet" href="vex-2.0.1/css/vex-theme-os.css" />
+
+		<noscript>
+			<link rel="stylesheet" href="css/skel.css" />
+			<link rel="stylesheet" href="css/style.css" />
+			<link rel="stylesheet" href="css/style-wide.css" />
+			<link rel="stylesheet" href="css/style-noscript.css" />
+		</noscript>
+		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+	</head>
+	<body class="loading">
+		<div id="wrapper">
+			<div id="bg"></div>
+			<div id="overlay"></div>
+			<div id="main">
+				<!-- Хедер -->
+					<header id="header">
+						<h1>Наопаке ствари у Србији</h1>
+						<p>Заједно откривамо наопаке ствари у нашој земљи</p>
+						<nav>
+							<ul>
+								<li><a href="#" class="fa fa-dodavanje dodavanje" title="Упиши наопаку ствар у базу података"><span>Додај</span></a></li>
+								<li><a href="naopako.php" class="fa fa-prikazi-tabelu" title="Прикажи до сада уочене наопаке ствари"><span>Прикажи</span></a></li>
+								
+								<li><a href="https://github.com/novicaz/naopako" target="_blank" class="fa fa-github" title="Прикључи се развоју ове апликације"><span>Гитхаб</span></a></li>
+								<li><a href="https://www.facebook.com/groups/1428615774079658/" target="_blank" class="fa fa-facebook" title="Пронађи нас на фејсу"><span>Фејсбук</span></a></li>
+								
+								<li><a href="#" class="fa fa-pomoc pomoc" title="Помоћ"><span>Помоћ</span></a></li>
+							</ul>
+						</nav>
+					</header>
+                    <!-- Формулар за додавање -->
+                    <script>
+                        $('.dodavanje').click(function(){
+                            vex.dialog.open({
+                                message: '<p>Изнесите своје запажање</p>',
+                                input: '<textarea name="opis" style="color: black;" placeholder="Опишите укратко" cols="25" rows="6" required></textarea>',
+                                buttons: [  $.extend({}, vex.dialog.buttons.YES, { text: 'Даље' })  ],
+                                callback: function (data){
+                                    if(data.opis!=undefined){ 
+                                        vex.dialog.confirm({
+                                            message: '<h2>Хвала на времену које сте издвојили</h2><br><span>Ваше запажање је успешно забележено.' + '</span>' + '<br>',
+                                            buttons: [  $.extend({}, vex.dialog.buttons.YES, { text: 'Даље' })  ],
+                                            callback: function(value) {  }
+                                        });
+                                    }
+                                }
+                            });
+                        });
+                        
+                        $('.pomoc').click(function(){
+		                    vex.dialog.confirm({
+		                                        message: '<span style="font-size: 16px;">' + 'Наопаке ствари има задатак да уз помоћ људи који брину о заједници, на један рапидан начин, детектује и централизује све уочене погрешне и непожељне ствари, проблеме итд. <br>Овде је фокус одвојен од дискусија о томе како решити неку од наведених ствари и усмерен је искључиво на бележењу, наопаких ствари уочених од стране становника Србије.<br>Посебна локација, алати и људи се баве другим делом посла који се односи на проверу сваке наведене ставке, тј. филтрирањем сакупљених информација, те формирањем поузданијег списка наопаких ствари које треба исправити, након чега на сцену ступа грађански активизам који ће се побринути да свака од наведених ставки буде исправљена на једнако рапидан начин као и што је то био случај са прикупљањем информација. <br>  ' + '</span>' + '<br>',
+		                                        buttons: [  $.extend({})  ],
+		                                        callback: function(value) {  }
+		                                    });
+						});                        
+                    </script>
+				<!-- Футер -->
+				<footer id="footer"><span class="copyright">&copy;2014 УЈС</span></footer>
+			</div>
+		</div>
+	</body>
+</html>
